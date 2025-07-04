@@ -34,12 +34,47 @@
                                 <a href="#" class="nav-link sub-nav-link active" data-section="points-system">
                                     <i class="fas fa-star me-2"></i>ระบบสะสมแต้ม
                                 </a>
+                                <!-- Sub-steps for ระบบสะสมแต้ม -->
+                                <div class="nav-sub-steps">
+                                    <a href="#" class="nav-link step-link" data-target="points-step-1">
+                                        <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>เข้าสู่ระบบ
+                                    </a>
+                                    <a href="#" class="nav-link step-link" data-target="points-step-2">
+                                        <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ตรวจสอบแต้มสะสม
+                                    </a>
+                                    <a href="#" class="nav-link step-link" data-target="points-step-3">
+                                        <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ใช้แต้มแลกของรางวัล
+                                    </a>
+                                </div>
+                                
                                 <a href="#" class="nav-link sub-nav-link" data-section="booking-system">
                                     <i class="fas fa-calendar-alt me-2"></i>ระบบจองรอบฐานกิจกรรม
                                 </a>
+                                <!-- Sub-steps for ระบบจองรอบฐานกิจกรรม -->
+                                <div class="nav-sub-steps">
+                                    <a href="#" class="nav-link step-link" data-target="booking-step-1">
+                                        <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>เลือกกิจกรรม
+                                    </a>
+                                    <a href="#" class="nav-link step-link" data-target="booking-step-2">
+                                        <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>เลือกรอบเวลา
+                                    </a>
+                                    <a href="#" class="nav-link step-link" data-target="booking-step-3">
+                                        <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ยืนยันการจอง
+                                    </a>
+                                </div>
+                                
                                 <a href="#" class="nav-link sub-nav-link" data-section="certificate-check">
                                     <i class="fas fa-certificate me-2"></i>ระบบตรวจสอบเกียรติบัตร
                                 </a>
+                                <!-- Sub-steps for ระบบตรวจสอบเกียรติบัตร -->
+                                <div class="nav-sub-steps">
+                                    <a href="#" class="nav-link step-link" data-target="cert-step-1">
+                                        <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ใส่รหัสเกียรติบัตร
+                                    </a>
+                                    <a href="#" class="nav-link step-link" data-target="cert-step-2">
+                                        <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ตรวจสอบผลลัพธ์
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -83,7 +118,7 @@
                     </div>
 
                     <div class="step-container">
-                        <div class="step-item">
+                        <div class="step-item" id="points-step-1">
                             <div class="step-number">1</div>
                             <div class="step-content">
                                 <h4>เข้าสู่ระบบ</h4>
@@ -100,7 +135,7 @@
                             </div>
                         </div>
 
-                        <div class="step-item">
+                        <div class="step-item" id="points-step-2">
                             <div class="step-number">2</div>
                             <div class="step-content">
                                 <h4>ตรวจสอบแต้มสะสม</h4>
@@ -117,7 +152,7 @@
                             </div>
                         </div>
 
-                        <div class="step-item">
+                        <div class="step-item" id="points-step-3">
                             <div class="step-number">3</div>
                             <div class="step-content">
                                 <h4>ใช้แต้มแลกของรางวัล</h4>
@@ -144,7 +179,7 @@
                     </div>
 
                     <div class="step-container">
-                        <div class="step-item">
+                        <div class="step-item" id="booking-step-1">
                             <div class="step-number">1</div>
                             <div class="step-content">
                                 <h4>เลือกกิจกรรม</h4>
@@ -161,7 +196,7 @@
                             </div>
                         </div>
 
-                        <div class="step-item">
+                        <div class="step-item" id="booking-step-2">
                             <div class="step-number">2</div>
                             <div class="step-content">
                                 <h4>เลือกรอบเวลา</h4>
@@ -178,7 +213,7 @@
                             </div>
                         </div>
 
-                        <div class="step-item">
+                        <div class="step-item" id="booking-step-3">
                             <div class="step-number">3</div>
                             <div class="step-content">
                                 <h4>ยืนยันการจอง</h4>
@@ -205,7 +240,7 @@
                     </div>
 
                     <div class="step-container">
-                        <div class="step-item">
+                        <div class="step-item" id="cert-step-1">
                             <div class="step-number">1</div>
                             <div class="step-content">
                                 <h4>ใส่รหัสเกียรติบัตร</h4>
@@ -222,7 +257,7 @@
                             </div>
                         </div>
 
-                        <div class="step-item">
+                        <div class="step-item" id="cert-step-2">
                             <div class="step-number">2</div>
                             <div class="step-content">
                                 <h4>ตรวจสอบผลลัพธ์</h4>
@@ -301,7 +336,9 @@
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.sub-nav-link');
             const contentSections = document.querySelectorAll('.content-section');
+            const stepLinks = document.querySelectorAll('.step-link');
             
+            // Main navigation functionality
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -322,7 +359,85 @@
                     document.getElementById(sectionId).classList.add('active');
                 });
             });
+            
+            // Step navigation functionality
+            stepLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('data-target');
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        // First, ensure the parent section is visible
+                        const parentSection = targetElement.closest('.content-section');
+                        if (parentSection) {
+                            // Hide all content sections
+                            contentSections.forEach(section => {
+                                section.classList.remove('active');
+                            });
+                            
+                            // Show parent section
+                            parentSection.classList.add('active');
+                            
+                            // Update main navigation
+                            navLinks.forEach(l => l.classList.remove('active'));
+                            const mainNavLink = document.querySelector(`[data-section="${parentSection.id}"]`);
+                            if (mainNavLink) {
+                                mainNavLink.classList.add('active');
+                            }
+                        }
+                        
+                        // Scroll to target element with smooth scrolling
+                        setTimeout(() => {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }, 100);
+                        
+                        // Add highlight effect
+                        targetElement.classList.add('highlight');
+                        setTimeout(() => {
+                            targetElement.classList.remove('highlight');
+                        }, 2000);
+                    }
+                });
+            });
         });
     </script>
+    
+    <style>
+        /* Additional styles for step navigation */
+        .nav-sub-steps {
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .step-link {
+            font-size: 0.85rem;
+            color: #6c757d;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            transition: all 0.3s ease;
+        }
+        
+        .step-link:hover {
+            background-color: #f8f9fa;
+            color: #495057;
+            text-decoration: none;
+        }
+        
+        .step-item.highlight {
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .step-item {
+            scroll-margin-top: 2rem;
+        }
+    </style>
 </body>
 </html>
