@@ -26,13 +26,13 @@
                 <div class="sidebar-sticky">
                     <h6 class="sidebar-heading">หัวข้อ</h6>
                     
-                    <!-- ผู้ใช้งาน -->
+                    <!-- ผู้ใช้งานทั่วไป -->
                     <div class="nav-section">
-                        <a href="#user-section" class="nav-link nav-section-title" data-bs-toggle="collapse">
-                            <i class="fas fa-user me-2"></i>ผู้ใช้งาน
+                        <a href="#general-user-section" class="nav-link nav-section-title" data-bs-toggle="collapse">
+                            <i class="fas fa-user me-2"></i>ผู้ใช้งานทั่วไป
                             <i class="fas fa-chevron-down ms-auto"></i>
                         </a>
-                        <div class="collapse show" id="user-section">
+                        <div class="collapse show" id="general-user-section">
                             <div class="nav-subsection">
                                 <a href="#points-submenu" class="nav-link sub-nav-link active" data-section="points-system" data-bs-toggle="collapse">
                                     <i class="fas fa-star me-2"></i>ระบบสะสมแต้ม
@@ -45,10 +45,16 @@
                                             <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>เข้าสู่ระบบ
                                         </a>
                                         <a href="#" class="nav-link step-link" data-target="points-step-2">
-                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ตรวจสอบแต้มสะสม
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>รีเฟรชข้อมูล
                                         </a>
                                         <a href="#" class="nav-link step-link" data-target="points-step-3">
-                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ใช้แต้มแลกของรางวัล
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ตรวจสอบ E-Stamp
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="points-step-4">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>QR code สำหรับสะสม Stamp
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="points-step-5">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ประวัติการได้รับ E-Stamp
                                         </a>
                                     </div>
                                 </div>
@@ -61,29 +67,10 @@
                                 <div class="collapse" id="booking-submenu">
                                     <div class="nav-sub-steps">
                                         <a href="#" class="nav-link step-link" data-target="booking-step-1">
-                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>เลือกกิจกรรม
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ดูข้อมูลรอบฐานกิจกรรม
                                         </a>
                                         <a href="#" class="nav-link step-link" data-target="booking-step-2">
-                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>เลือกรอบเวลา
-                                        </a>
-                                        <a href="#" class="nav-link step-link" data-target="booking-step-3">
-                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ยืนยันการจอง
-                                        </a>
-                                    </div>
-                                </div>
-                                
-                                <a href="#cert-submenu" class="nav-link sub-nav-link" data-section="certificate-check" data-bs-toggle="collapse">
-                                    <i class="fas fa-certificate me-2"></i>ระบบตรวจสอบเกียรติบัตร
-                                    <i class="fas fa-chevron-down ms-auto submenu-arrow"></i>
-                                </a>
-                                <!-- Sub-steps for ระบบตรวจสอบเกียรติบัตร -->
-                                <div class="collapse" id="cert-submenu">
-                                    <div class="nav-sub-steps">
-                                        <a href="#" class="nav-link step-link" data-target="cert-step-1">
-                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ใส่รหัสเกียรติบัตร
-                                        </a>
-                                        <a href="#" class="nav-link step-link" data-target="cert-step-2">
-                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ตรวจสอบผลลัพธ์
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ตรวจสอบข้อมูลการจอง
                                         </a>
                                     </div>
                                 </div>
@@ -93,8 +80,102 @@
 
                     <!-- เจ้าหน้าที่ -->
                     <div class="nav-section">
+                        <a href="#staff-section" class="nav-link nav-section-title" data-bs-toggle="collapse">
+                            <i class="fas fa-user-tie me-2"></i>เจ้าหน้าที่
+                            <i class="fas fa-chevron-down ms-auto"></i>
+                        </a>
+                        <div class="collapse" id="staff-section">
+                            <div class="nav-subsection">
+                                <a href="#staff-points-submenu" class="nav-link sub-nav-link" data-section="staff-points" data-bs-toggle="collapse">
+                                    <i class="fas fa-star me-2"></i>ระบบสะสมแต้ม
+                                    <i class="fas fa-chevron-down ms-auto submenu-arrow"></i>
+                                </a>
+                                <!-- Sub-steps for ระบบสะสมแต้ม (Staff) -->
+                                <div class="collapse" id="staff-points-submenu">
+                                    <div class="nav-sub-steps">
+                                        <a href="#" class="nav-link step-link" data-target="staff-points-step-1">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>จัดการระบบสะสมแต้ม
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="staff-points-step-2">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ตรวจสอบแต้มผู้ใช้
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="staff-points-step-3">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>อนุมัติแต้มสะสม
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <a href="#staff-booking-submenu" class="nav-link sub-nav-link" data-section="staff-booking" data-bs-toggle="collapse">
+                                    <i class="fas fa-calendar-alt me-2"></i>ระบบจองรอบฐานกิจกรรม
+                                    <i class="fas fa-chevron-down ms-auto submenu-arrow"></i>
+                                </a>
+                                <!-- Sub-steps for ระบบจองรอบฐานกิจกรรม (Staff) -->
+                                <div class="collapse" id="staff-booking-submenu">
+                                    <div class="nav-sub-steps">
+                                        <a href="#" class="nav-link step-link" data-target="staff-booking-step-1">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>จัดการรอบฐานกิจกรรม
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="staff-booking-step-2">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ตรวจสอบการจอง
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="staff-booking-step-3">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>อนุมัติการจอง
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <a href="#staff-create-cert-submenu" class="nav-link sub-nav-link" data-section="staff-create-cert" data-bs-toggle="collapse">
+                                    <i class="fas fa-plus-circle me-2"></i>ระบบสร้างเกียรติบัตร
+                                    <i class="fas fa-chevron-down ms-auto submenu-arrow"></i>
+                                </a>
+                                <!-- Sub-steps for ระบบสร้างเกียรติบัตร (Staff) -->
+                                <div class="collapse" id="staff-create-cert-submenu">
+                                    <div class="nav-sub-steps">
+                                        <a href="#" class="nav-link step-link" data-target="staff-create-cert-step-1">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>สร้างเกียรติบัตร
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="staff-create-cert-step-2">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ส่งเกียรติบัตร
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <a href="#staff-check-cert-submenu" class="nav-link sub-nav-link" data-section="staff-check-cert" data-bs-toggle="collapse">
+                                    <i class="fas fa-certificate me-2"></i>ระบบตรวจสอบเกียรติบัตร
+                                    <i class="fas fa-chevron-down ms-auto submenu-arrow"></i>
+                                </a>
+                                <!-- Sub-steps for ระบบตรวจสอบเกียรติบัตร (Staff) -->
+                                <div class="collapse" id="staff-check-cert-submenu">
+                                    <div class="nav-sub-steps">
+                                        <a href="#" class="nav-link step-link" data-target="staff-check-cert-step-1">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ตรวจสอบเกียรติบัตร
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <a href="#staff-report-issue-submenu" class="nav-link sub-nav-link" data-section="staff-report-issue" data-bs-toggle="collapse">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>ระบบรายงานปัญหา
+                                    <i class="fas fa-chevron-down ms-auto submenu-arrow"></i>
+                                </a>
+                                <!-- Sub-steps for ระบบรายงานปัญหา (Staff) -->
+                                <div class="collapse" id="staff-report-issue-submenu">
+                                    <div class="nav-sub-steps">
+                                        <a href="#" class="nav-link step-link" data-target="staff-report-issue-step-1">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>รายงานปัญหา
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="staff-report-issue-step-2">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ติดตามสถานะ
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ผู้ดูแลระบบ -->
+                    <div class="nav-section">
                         <a href="#admin-section" class="nav-link nav-section-title" data-bs-toggle="collapse">
-                            <i class="fas fa-cog me-2"></i>เจ้าหน้าที่
+                            <i class="fas fa-cog me-2"></i>ผู้ดูแลระบบ
                             <i class="fas fa-chevron-down ms-auto"></i>
                         </a>
                         <div class="collapse" id="admin-section">
@@ -103,13 +184,20 @@
                                     <i class="fas fa-star me-2"></i>ระบบสะสมแต้ม
                                     <i class="fas fa-chevron-down ms-auto submenu-arrow"></i>
                                 </a>
+                                <!-- Sub-steps for ระบบสะสมแต้ม (Admin) -->
                                 <div class="collapse" id="admin-points-submenu">
                                     <div class="nav-sub-steps">
                                         <a href="#" class="nav-link step-link" data-target="admin-points-step-1">
-                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>จัดการแต้มผู้ใช้
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>จัดการระบบสะสมแต้ม
                                         </a>
                                         <a href="#" class="nav-link step-link" data-target="admin-points-step-2">
-                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ตั้งค่าของรางวัล
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ตั้งค่าระบบแต้ม
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="admin-points-step-3">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>รายงานสถิติแต้ม
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="admin-points-step-4">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>จัดการผู้ใช้งาน
                                         </a>
                                     </div>
                                 </div>
@@ -118,61 +206,86 @@
                                     <i class="fas fa-calendar-alt me-2"></i>ระบบจองรอบฐานกิจกรรม
                                     <i class="fas fa-chevron-down ms-auto submenu-arrow"></i>
                                 </a>
+                                <!-- Sub-steps for ระบบจองรอบฐานกิจกรรม (Admin) -->
                                 <div class="collapse" id="admin-booking-submenu">
                                     <div class="nav-sub-steps">
                                         <a href="#" class="nav-link step-link" data-target="admin-booking-step-1">
-                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>สร้างกิจกรรม
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>จัดการรอบฐานกิจกรรม
                                         </a>
                                         <a href="#" class="nav-link step-link" data-target="admin-booking-step-2">
-                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>จัดการการจอง
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ตั้งค่าระบบจอง
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="admin-booking-step-3">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>รายงานสถิติการจอง
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="admin-booking-step-4">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>จัดการสิทธิ์การจอง
                                         </a>
                                     </div>
                                 </div>
                                 
-                                <a href="#admin-cert-submenu" class="nav-link sub-nav-link" data-section="admin-check-cert" data-bs-toggle="collapse">
-                                    <i class="fas fa-certificate me-2"></i>ระบบตรวจสอบเกียรติบัตร
-                                    <i class="fas fa-chevron-down ms-auto submenu-arrow"></i>
-                                </a>
-                                <div class="collapse" id="admin-cert-submenu">
-                                    <div class="nav-sub-steps">
-                                        <a href="#" class="nav-link step-link" data-target="admin-cert-step-1">
-                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ตรวจสอบเกียรติบัตร
-                                        </a>
-                                        <a href="#" class="nav-link step-link" data-target="admin-cert-step-2">
-                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>จัดการฐานข้อมูล
-                                        </a>
-                                    </div>
-                                </div>
-                                
-                                <a href="#create-cert-submenu" class="nav-link sub-nav-link" data-section="create-cert" data-bs-toggle="collapse">
+                                <a href="#admin-create-cert-submenu" class="nav-link sub-nav-link" data-section="admin-create-cert" data-bs-toggle="collapse">
                                     <i class="fas fa-plus-circle me-2"></i>ระบบสร้างเกียรติบัตร
                                     <i class="fas fa-chevron-down ms-auto submenu-arrow"></i>
                                 </a>
-                                <div class="collapse" id="create-cert-submenu">
+                                <!-- Sub-steps for ระบบสร้างเกียรติบัตร (Admin) -->
+                                <div class="collapse" id="admin-create-cert-submenu">
                                     <div class="nav-sub-steps">
-                                        <a href="#" class="nav-link step-link" data-target="create-cert-step-1">
-                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>เลือกแบบฟอร์ม
-                                        </a>
-                                        <a href="#" class="nav-link step-link" data-target="create-cert-step-2">
-                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>กรอกข้อมูล
-                                        </a>
-                                        <a href="#" class="nav-link step-link" data-target="create-cert-step-3">
+                                        <a href="#" class="nav-link step-link" data-target="admin-create-cert-step-1">
                                             <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>สร้างเกียรติบัตร
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="admin-create-cert-step-2">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>จัดการแม่แบบ
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="admin-create-cert-step-3">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ตั้งค่าระบบเกียรติบัตร
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="admin-create-cert-step-4">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>รายงานเกียรติบัตร
                                         </a>
                                     </div>
                                 </div>
                                 
-                                <a href="#report-issue-submenu" class="nav-link sub-nav-link" data-section="report-issue" data-bs-toggle="collapse">
-                                    <i class="fas fa-exclamation-triangle me-2"></i>ระบบแจ้งปัญหา
+                                <a href="#admin-check-cert-submenu" class="nav-link sub-nav-link" data-section="admin-check-cert" data-bs-toggle="collapse">
+                                    <i class="fas fa-certificate me-2"></i>ระบบตรวจสอบเกียรติบัตร
                                     <i class="fas fa-chevron-down ms-auto submenu-arrow"></i>
                                 </a>
-                                <div class="collapse" id="report-issue-submenu">
+                                <!-- Sub-steps for ระบบตรวจสอบเกียรติบัตร (Admin) -->
+                                <div class="collapse" id="admin-check-cert-submenu">
                                     <div class="nav-sub-steps">
-                                        <a href="#" class="nav-link step-link" data-target="report-issue-step-1">
-                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>แจ้งปัญหา
+                                        <a href="#" class="nav-link step-link" data-target="admin-check-cert-step-1">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ตรวจสอบเกียรติบัตร
                                         </a>
-                                        <a href="#" class="nav-link step-link" data-target="report-issue-step-2">
-                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ติดตามสถานะ
+                                        <a href="#" class="nav-link step-link" data-target="admin-check-cert-step-2">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>จัดการการตรวจสอบ
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="admin-check-cert-step-3">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>รายงานผลการตรวจสอบ
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="admin-check-cert-step-4">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ตั้งค่าระบบตรวจสอบ
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <a href="#admin-report-issue-submenu" class="nav-link sub-nav-link" data-section="admin-report-issue" data-bs-toggle="collapse">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>ระบบรายงานปัญหา
+                                    <i class="fas fa-chevron-down ms-auto submenu-arrow"></i>
+                                </a>
+                                <!-- Sub-steps for ระบบรายงานปัญหา (Admin) -->
+                                <div class="collapse" id="admin-report-issue-submenu">
+                                    <div class="nav-sub-steps">
+                                        <a href="#" class="nav-link step-link" data-target="admin-report-issue-step-1">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>จัดการรายงานปัญหา
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="admin-report-issue-step-2">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>ตั้งค่าระบบรายงาน
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="admin-report-issue-step-3">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>รายงานสถิติปัญหา
+                                        </a>
+                                        <a href="#" class="nav-link step-link" data-target="admin-report-issue-step-4">
+                                            <i class="fas fa-circle me-2" style="font-size: 0.5rem;"></i>จัดการทีมแก้ไข
                                         </a>
                                     </div>
                                 </div>
@@ -188,7 +301,7 @@
                 <div id="points-system" class="content-section active">
                     <div class="content-header">
                         <h2><i class="fas fa-star text-warning me-2"></i>ระบบสะสมแต้ม</h2>
-                        <p class="text-muted">คู่มือการใช้งานระบบสะสมแต้มสำหรับผู้ใช้งาน</p>
+                        <p class="text-muted">คู่มือการใช้งานระบบสะสมแต้มสำหรับผู้ใช้งานทั่วไป</p>
                     </div>
 
                     <div class="step-container">
@@ -197,13 +310,13 @@
                             <div class="step-content">
                                 <h4>เข้าสู่ระบบ</h4>
                                 <div class="step-image">
-                                    <img src="https://raw.githubusercontent.com/LogicsDevStudio/EBS-RTNMU/refs/heads/main/images/Booking001.jpg" 
+                                    <img src="https://raw.githubusercontent.com/LogicsDevStudio/NMUOPH-StaffManual/refs/heads/main/images/usermanual/estamp/Screenshot%202025-07-06%20132421.png" 
                                          alt="ภาพหน้าจอเข้าสู่ระบบ" 
                                          class="img-fluid rounded shadow-sm"
                                          style="max-height: 400px; object-fit: contain;">
                                 </div>
                                 <p class="step-description">
-                                    เข้าสู่ระบบด้วยชื่อผู้ใช้และรหัสผ่านที่ได้รับจากผู้ดูแลระบบ หากยังไม่มีบัญชีผู้ใช้ 
+                                    เข้าสู่ระบบด้วยเลขบัตรประจำตัวประชาชน หากยังไม่มีบัญชีผู้ใช้ 
                                     โปรดติดต่อผู้ดูแลระบบเพื่อขอสร้างบัญชีใหม่
                                 </p>
                             </div>
@@ -212,16 +325,16 @@
                         <div class="step-item" id="points-step-2">
                             <div class="step-number">2</div>
                             <div class="step-content">
-                                <h4>ตรวจสอบแต้มสะสม</h4>
+                                <h4>รีเฟรชข้อมูล</h4>
                                 <div class="step-image">
-                                    <img src="https://raw.githubusercontent.com/LogicsDevStudio/NMUOPH-StaffManual/refs/heads/main/images/Official%20poster%20(Instagram%20%E0%B9%82%E0%B8%9E%E0%B8%AA%E0%B8%95%E0%B9%8C%204_5).png" 
-                                         alt="ภาพหน้าจอแสดงแต้มสะสม" 
+                                    <img src="https://raw.githubusercontent.com/LogicsDevStudio/NMUOPH-StaffManual/refs/heads/main/images/usermanual/estamp/Screenshot%202025-07-06%20132501.png" 
+                                         alt="ภาพหน้าจอรีเฟรชข้อมูล" 
                                          class="img-fluid rounded shadow-sm"
                                          style="max-height: 400px; object-fit: contain;">
                                 </div>
                                 <p class="step-description">
-                                    ดูแต้มสะสมปัจจุบันของคุณได้จากหน้าแดชบอร์ด สามารถดูประวัติการได้รับแต้มและการใช้แต้ม
-                                    พร้อมทั้งรายละเอียดการเข้าร่วมกิจกรรมต่างๆ
+                                    อัปเดตข้อมูลล่าสุดในระบบโดยการกดปุ่มรีเฟรช เพื่อให้แน่ใจว่าข้อมูลที่แสดงเป็นข้อมูลปัจจุบัน
+                                    รวมถึงแต้มสะสม และประวัติการทำกิจกรรม
                                 </p>
                             </div>
                         </div>
@@ -229,16 +342,50 @@
                         <div class="step-item" id="points-step-3">
                             <div class="step-number">3</div>
                             <div class="step-content">
-                                <h4>ใช้แต้มแลกของรางวัล</h4>
+                                <h4>ตรวจสอบ E-Stamp</h4>
                                 <div class="step-image">
-                                    <div class="placeholder-image">
-                                        <i class="fas fa-gift fa-3x text-muted"></i>
-                                        <p>ภาพหน้าจอแลกของรางวัล</p>
-                                    </div>
+                                    <img src="https://raw.githubusercontent.com/LogicsDevStudio/NMUOPH-StaffManual/refs/heads/main/images/usermanual/estamp/Screenshot%202025-07-06%20132511.png" 
+                                         alt="ภาพหน้าจอตรวจสอบ E-Stamp" 
+                                         class="img-fluid rounded shadow-sm"
+                                         style="max-height: 400px; object-fit: contain;">
                                 </div>
                                 <p class="step-description">
-                                    เลือกของรางวัลที่ต้องการจากรายการที่มีอยู่ ตรวจสอบแต้มที่ต้องใช้ และยืนยันการแลกของรางวัล
-                                    ระบบจะหักแต้มและบันทึกการแลกของรางวัลไว้ในประวัติ
+                                    ดูจำนวน E-Stamp ที่ได้รับจากการเข้าร่วมกิจกรรมต่างๆ ตรวจสอบสถานะการสะสม
+                                    และดูรายละเอียดการได้รับ E-Stamp แต่ละครั้ง
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="step-item" id="points-step-4">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>QR code สำหรับสะสม Stamp</h4>
+                                <div class="step-image">
+                                    <img src="https://raw.githubusercontent.com/LogicsDevStudio/NMUOPH-StaffManual/refs/heads/main/images/usermanual/estamp/Screenshot%202025-07-06%20132517.png" 
+                                         alt="ภาพหน้าจอ QR code" 
+                                         class="img-fluid rounded shadow-sm"
+                                         style="max-height: 400px; object-fit: contain;">
+                                </div>
+                                <p class="step-description">
+                                    แสดง QR code ส่วนตัวของคุณให้เจ้าหน้าที่สแกนเพื่อเพิ่ม E-Stamp เมื่อเข้าร่วมกิจกรรม
+                                    QR code นี้จะใช้ในการระบุตัวตนและเพิ่มแต้มในระบบ
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="step-item" id="points-step-5">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>ประวัติการได้รับ E-Stamp</h4>
+                                <div class="step-image">
+                                    <img src="https://raw.githubusercontent.com/LogicsDevStudio/NMUOPH-StaffManual/refs/heads/main/images/usermanual/estamp/Screenshot%202025-07-06%20132524.png" 
+                                         alt="ภาพหน้าจอประวัติการได้รับ E-Stamp" 
+                                         class="img-fluid rounded shadow-sm"
+                                         style="max-height: 400px; object-fit: contain;">
+                                </div>
+                                <p class="step-description">
+                                    ดูประวัติการได้รับ E-Stamp ทั้งหมด รวมถึงวันที่ เวลา กิจกรรมที่เข้าร่วม
+                                    และจำนวน E-Stamp ที่ได้รับ
                                 </p>
                             </div>
                         </div>
@@ -249,23 +396,23 @@
                 <div id="booking-system" class="content-section">
                     <div class="content-header">
                         <h2><i class="fas fa-calendar-alt text-primary me-2"></i>ระบบจองรอบฐานกิจกรรม</h2>
-                        <p class="text-muted">คู่มือการจองรอบฐานกิจกรรมสำหรับผู้ใช้งาน</p>
+                        <p class="text-muted">คู่มือการใช้งานระบบจองรอบฐานกิจกรรมสำหรับผู้ใช้งานทั่วไป</p>
                     </div>
 
                     <div class="step-container">
                         <div class="step-item" id="booking-step-1">
                             <div class="step-number">1</div>
                             <div class="step-content">
-                                <h4>เลือกกิจกรรม</h4>
+                                <h4>ดูข้อมูลรอบฐานกิจกรรม</h4>
                                 <div class="step-image">
-                                    <div class="placeholder-image">
-                                        <i class="fas fa-list fa-3x text-muted"></i>
-                                        <p>ภาพหน้าจอรายการกิจกรรม</p>
-                                    </div>
+                                    <img src="https://raw.githubusercontent.com/LogicsDevStudio/NMUOPH-StaffManual/refs/heads/main/images/usermanual/bookingsystem/Screenshot%202025-07-06%20132039.png" 
+                                         alt="ภาพหน้าจอข้อมูลรอบฐานกิจกรรม" 
+                                         class="img-fluid rounded shadow-sm"
+                                         style="max-height: 400px; object-fit: contain;">
                                 </div>
                                 <p class="step-description">
-                                    เลือกกิจกรรมที่ต้องการเข้าร่วมจากรายการกิจกรรมที่เปิดให้จอง ดูรายละเอียดกิจกรรม
-                                    วันที่ เวลา และจำนวนที่นั่งที่เหลือ
+                                    ดูข้อมูลรอบฐานกิจกรรมที่เปิดให้เข้าร่วม ตรวจสอบรายละเอียดกิจกรรม
+                                    วันที่ เวลา สถานที่ และจำนวนที่นั่งที่เหลือ
                                 </p>
                             </div>
                         </div>
@@ -273,180 +420,197 @@
                         <div class="step-item" id="booking-step-2">
                             <div class="step-number">2</div>
                             <div class="step-content">
-                                <h4>เลือกรอบเวลา</h4>
+                                <h4>ตรวจสอบข้อมูลการจอง</h4>
                                 <div class="step-image">
-                                    <div class="placeholder-image">
-                                        <i class="fas fa-clock fa-3x text-muted"></i>
-                                        <p>ภาพหน้าจอเลือกรอบเวลา</p>
-                                    </div>
+                                    <img src="https://raw.githubusercontent.com/LogicsDevStudio/NMUOPH-StaffManual/refs/heads/main/images/usermanual/bookingsystem/Screenshot%202025-07-06%20132059.png" 
+                                         alt="ภาพหน้าจอตรวจสอบข้อมูลการจอง" 
+                                         class="img-fluid rounded shadow-sm"
+                                         style="max-height: 400px; object-fit: contain;">
                                 </div>
                                 <p class="step-description">
-                                    เลือกรอบเวลาที่ต้องการจากรอบเวลาที่เปิดให้จอง ตรวจสอบจำนวนที่นั่งที่เหลือ
-                                    และรายละเอียดของแต่ละรอบ
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="step-item" id="booking-step-3">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h4>ยืนยันการจอง</h4>
-                                <div class="step-image">
-                                    <div class="placeholder-image">
-                                        <i class="fas fa-check-circle fa-3x text-muted"></i>
-                                        <p>ภาพหน้าจอยืนยันการจอง</p>
-                                    </div>
-                                </div>
-                                <p class="step-description">
-                                    ตรวจสอบข้อมูลการจองให้ถูกต้อง แล้วกดยืนยันการจอง ระบบจะส่งอีเมลยืนยันและ
-                                    บันทึกการจองไว้ในประวัติของคุณ
+                                    ตรวจสอบประวัติการจองของคุณ ดูสถานะการจอง รายละเอียดกิจกรรมที่จองไว้
+                                    และข้อมูลการยืนยันการเข้าร่วมกิจกรรม โดยการกรอกเลขบัตรประจำตัวประชาชน
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Certificate Check Section -->
-                <div id="certificate-check" class="content-section">
+                <!-- Staff Points Section -->
+                <div id="staff-points" class="content-section">
                     <div class="content-header">
-                        <h2><i class="fas fa-certificate text-success me-2"></i>ระบบตรวจสอบเกียรติบัตร</h2>
-                        <p class="text-muted">คู่มือการตรวจสอบเกียรติบัตรสำหรับผู้ใช้งาน</p>
+                        <h2><i class="fas fa-star text-warning me-2"></i>ระบบสะสมแต้ม (เจ้าหน้าที่)</h2>
+                        <p class="text-muted">คู่มือการใช้งานระบบสะสมแต้มสำหรับเจ้าหน้าที่</p>
                     </div>
 
                     <div class="step-container">
-                        <div class="step-item" id="cert-step-1">
+                        <div class="step-item" id="staff-points-step-1">
                             <div class="step-number">1</div>
                             <div class="step-content">
-                                <h4>ใส่รหัสเกียรติบัตร</h4>
-                                <div class="step-image">
-                                    <div class="placeholder-image">
-                                        <i class="fas fa-keyboard fa-3x text-muted"></i>
-                                        <p>ภาพหน้าจอใส่รหัสเกียรติบัตร</p>
-                                    </div>
-                                </div>
-                                <p class="step-description">
-                                    ใส่รหัสเกียรติบัตรที่ต้องการตรวจสอบ รหัสเกียรติบัตรสามารถพบได้จากเอกสารเกียรติบัตร
-                                    หรือจากอีเมลที่ได้รับเมื่อเสร็จสิ้นกิจกรรม
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="step-item" id="cert-step-2">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h4>ตรวจสอบผลลัพธ์</h4>
-                                <div class="step-image">
-                                    <div class="placeholder-image">
-                                        <i class="fas fa-search fa-3x text-muted"></i>
-                                        <p>ภาพหน้าจอผลการตรวจสอบ</p>
-                                    </div>
-                                </div>
-                                <p class="step-description">
-                                    ระบบจะแสดงผลการตรวจสอบ หากเกียรติบัตรถูกต้อง จะแสดงข้อมูลการออกเกียรติบัตร
-                                    ชื่อผู้รับ วันที่ออก และรายละเอียดกิจกรรม
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Admin Points Section - Replace existing -->
-                <div id="admin-points" class="content-section">
-                    <div class="content-header">
-                        <h2><i class="fas fa-star text-warning me-2"></i>ระบบสะสมแต้ม (ผู้ดูแล)</h2>
-                        <p class="text-muted">คู่มือการจัดการระบบสะสมแต้มสำหรับผู้ดูแลระบบ</p>
-                    </div>
-
-                    <div class="step-container">
-                        <div class="step-item" id="admin-points-step-1">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h4>จัดการแต้มผู้ใช้</h4>
+                                <h4>จัดการระบบสะสมแต้ม</h4>
                                 <div class="step-image">
                                     <div class="placeholder-image">
                                         <i class="fas fa-users-cog fa-3x text-muted"></i>
-                                        <p>ภาพหน้าจอจัดการแต้มผู้ใช้</p>
+                                        <p>ภาพหน้าจอจัดการระบบสะสมแต้ม</p>
                                     </div>
                                 </div>
                                 <p class="step-description">
-                                    เข้าสู่ระบบจัดการแต้มผู้ใช้ สามารถเพิ่ม ลด หรือปรับปรุงแต้มสะสมของผู้ใช้แต่ละคน
-                                    ดูประวัติการทำธุรกรรมแต้ม และจัดการข้อมูลผู้ใช้ในระบบ
+                                    เจ้าหน้าที่สามารถจัดการระบบสะสมแต้มของผู้ใช้งาน เพิ่มหรือลดแต้ม
+                                    ตรวจสอบประวัติการทำธุรกรรม และจัดการข้อมูลผู้ใช้ในระบบ
                                 </p>
                             </div>
                         </div>
 
-                        <div class="step-item" id="admin-points-step-2">
+                        <div class="step-item" id="staff-points-step-2">
                             <div class="step-number">2</div>
                             <div class="step-content">
-                                <h4>ตั้งค่าของรางวัล</h4>
+                                <h4>ตรวจสอบแต้มผู้ใช้</h4>
                                 <div class="step-image">
                                     <div class="placeholder-image">
-                                        <i class="fas fa-trophy fa-3x text-muted"></i>
-                                        <p>ภาพหน้าจอตั้งค่าของรางวัล</p>
+                                        <i class="fas fa-search fa-3x text-muted"></i>
+                                        <p>ภาพหน้าจอตรวจสอบแต้มผู้ใช้</p>
                                     </div>
                                 </div>
                                 <p class="step-description">
-                                    เพิ่มหรือแก้ไขรายการของรางวัล กำหนดจำนวนแต้มที่ต้องใช้แลก อัปโหลดรูปภาพสินค้า
-                                    และจัดการสต็อกของรางวัลแต่ละชนิด
+                                    ตรวจสอบยอดแต้มสะสมของผู้ใช้แต่ละคน ดูประวัติการได้รับและใช้แต้ม
+                                    และตรวจสอบความถูกต้องของข้อมูลในระบบ
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="step-item" id="staff-points-step-3">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>อนุมัติแต้มสะสม</h4>
+                                <div class="step-image">
+                                    <div class="placeholder-image">
+                                        <i class="fas fa-check-circle fa-3x text-muted"></i>
+                                        <p>ภาพหน้าจออนุมัติแต้มสะสม</p>
+                                    </div>
+                                </div>
+                                <p class="step-description">
+                                    อนุมัติการให้แต้มสะสมจากการเข้าร่วมกิจกรรม ตรวจสอบข้อมูลการเข้าร่วม
+                                    และอนุมัติการเพิ่มแต้มในระบบ
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Admin Booking Section - Replace existing -->
-                <div id="admin-booking" class="content-section">
+                <!-- Staff Booking Section -->
+                <div id="staff-booking" class="content-section">
                     <div class="content-header">
-                        <h2><i class="fas fa-calendar-alt text-primary me-2"></i>ระบบจองรอบฐานกิจกรรม (ผู้ดูแล)</h2>
-                        <p class="text-muted">คู่มือการจัดการระบบจองสำหรับผู้ดูแลระบบ</p>
+                        <h2><i class="fas fa-calendar-alt text-primary me-2"></i>ระบบจองรอบฐานกิจกรรม (เจ้าหน้าที่)</h2>
+                        <p class="text-muted">คู่มือการใช้งานระบบจองรอบฐานกิจกรรมสำหรับเจ้าหน้าที่</p>
                     </div>
 
                     <div class="step-container">
-                        <div class="step-item" id="admin-booking-step-1">
+                        <div class="step-item" id="staff-booking-step-1">
                             <div class="step-number">1</div>
                             <div class="step-content">
-                                <h4>สร้างกิจกรรม</h4>
-                                <div class="step-image">
-                                    <div class="placeholder-image">
-                                        <i class="fas fa-plus-square fa-3x text-muted"></i>
-                                        <p>ภาพหน้าจอสร้างกิจกรรม</p>
-                                    </div>
-                                </div>
-                                <p class="step-description">
-                                    สร้างกิจกรรมใหม่ โดยกรอกข้อมูลรายละเอียดกิจกรรม กำหนดวันที่ เวลา จำนวนที่นั่ง
-                                    และตั้งค่าการเปิดรับจองล่วงหน้า
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="step-item" id="admin-booking-step-2">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h4>จัดการการจอง</h4>
+                                <h4>จัดการรอบฐานกิจกรรม</h4>
                                 <div class="step-image">
                                     <div class="placeholder-image">
                                         <i class="fas fa-clipboard-list fa-3x text-muted"></i>
-                                        <p>ภาพหน้าจอจัดการการจอง</p>
+                                        <p>ภาพหน้าจอจัดการรอบฐานกิจกรรม</p>
                                     </div>
                                 </div>
                                 <p class="step-description">
-                                    ดูรายชื่อผู้จอง อนุมัติหรือยกเลิกการจอง ส่งอีเมลแจ้งเตือนให้ผู้เข้าร่วมกิจกรรม
-                                    และจัดการรายชื่อผู้เข้าร่วมจริง
+                                    เจ้าหน้าที่สามารถจัดการรอบฐานกิจกรรมต่างๆ สร้างรอบใหม่ แก้ไขข้อมูล
+                                    และจัดการจำนวนผู้เข้าร่วม
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="step-item" id="staff-booking-step-2">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>ตรวจสอบการจอง</h4>
+                                <div class="step-image">
+                                    <div class="placeholder-image">
+                                        <i class="fas fa-list-alt fa-3x text-muted"></i>
+                                        <p>ภาพหน้าจอตรวจสอบการจอง</p>
+                                    </div>
+                                </div>
+                                <p class="step-description">
+                                    ตรวจสอบรายชื่อผู้ที่จองเข้าร่วมกิจกรรม ดูรายละเอียดการจอง
+                                    และตรวจสอบสถานะการเข้าร่วมของผู้ใช้
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="step-item" id="staff-booking-step-3">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>อนุมัติการจอง</h4>
+                                <div class="step-image">
+                                    <div class="placeholder-image">
+                                        <i class="fas fa-user-check fa-3x text-muted"></i>
+                                        <p>ภาพหน้าจออนุมัติการจอง</p>
+                                    </div>
+                                </div>
+                                <p class="step-description">
+                                    อนุมัติหรือปฏิเสธการจองของผู้ใช้ ตรวจสอบเงื่อนไขการเข้าร่วม
+                                    และจัดการสถานะการจอง
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Admin Check Cert Section - Replace existing -->
-                <div id="admin-check-cert" class="content-section">
+                <!-- Staff Create Cert Section -->
+                <div id="staff-create-cert" class="content-section">
                     <div class="content-header">
-                        <h2><i class="fas fa-certificate text-success me-2"></i>ระบบตรวจสอบเกียรติบัตร (ผู้ดูแล)</h2>
-                        <p class="text-muted">คู่มือการจัดการระบบตรวจสอบเกียรติบัตรสำหรับผู้ดูแลระบบ</p>
+                        <h2><i class="fas fa-plus-circle text-info me-2"></i>ระบบสร้างเกียรติบัตร (เจ้าหน้าที่)</h2>
+                        <p class="text-muted">คู่มือการใช้งานระบบสร้างเกียรติบัตรสำหรับเจ้าหน้าที่</p>
                     </div>
 
                     <div class="step-container">
-                        <div class="step-item" id="admin-cert-step-1">
+                        <div class="step-item" id="staff-create-cert-step-1">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>สร้างเกียรติบัตร</h4>
+                                <div class="step-image">
+                                    <div class="placeholder-image">
+                                        <i class="fas fa-certificate fa-3x text-muted"></i>
+                                        <p>ภาพหน้าจอสร้างเกียรติบัตร</p>
+                                    </div>
+                                </div>
+                                <p class="step-description">
+                                    เจ้าหน้าที่สามารถสร้างเกียรติบัตรให้กับผู้เข้าร่วมกิจกรรม
+                                    เลือกแบบฟอร์ม กรอกข้อมูล และสร้างเกียรติบัตรอิเล็กทรอนิกส์
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="step-item" id="staff-create-cert-step-2">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>ส่งเกียรติบัตร</h4>
+                                <div class="step-image">
+                                    <div class="placeholder-image">
+                                        <i class="fas fa-paper-plane fa-3x text-muted"></i>
+                                        <p>ภาพหน้าจอส่งเกียรติบัตร</p>
+                                    </div>
+                                </div>
+                                <p class="step-description">
+                                    ส่งเกียรติบัตรให้กับผู้ได้รับ ทั้งทางอีเมลหรือดาวน์โหลด
+                                    และตรวจสอบสถานะการส่ง
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff Check Cert Section -->
+                <div id="staff-check-cert" class="content-section">
+                    <div class="content-header">
+                        <h2><i class="fas fa-certificate text-success me-2"></i>ระบบตรวจสอบเกียรติบัตร (เจ้าหน้าที่)</h2>
+                        <p class="text-muted">คู่มือการใช้งานระบบตรวจสอบเกียรติบัตรสำหรับเจ้าหน้าที่</p>
+                    </div>
+
+                    <div class="step-container">
+                        <div class="step-item" id="staff-check-cert-step-1">
                             <div class="step-number">1</div>
                             <div class="step-content">
                                 <h4>ตรวจสอบเกียรติบัตร</h4>
@@ -457,130 +621,208 @@
                                     </div>
                                 </div>
                                 <p class="step-description">
-                                    ตรวจสอบความถูกต้องของเกียรติบัตรที่ออกโดยระบบ ดูรายละเอียดการออกเกียรติบัตร
-                                    และตรวจสอบสถานะการใช้งานของเกียรติบัตรแต่ละใบ
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="step-item" id="admin-cert-step-2">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h4>จัดการฐานข้อมูล</h4>
-                                <div class="step-image">
-                                    <div class="placeholder-image">
-                                        <i class="fas fa-database fa-3x text-muted"></i>
-                                        <p>ภาพหน้าจอจัดการฐานข้อมูล</p>
-                                    </div>
-                                </div>
-                                <p class="step-description">
-                                    จัดการฐานข้อมูลเกียรติบัตรในระบบ อัปเดตข้อมูลที่ผิดพลาด ยกเลิกเกียรติบัตรที่ออกผิด
-                                    และสร้างรายงานสถิติการออกเกียรติบัตร
+                                    เจ้าหน้าที่สามารถตรวจสอบความถูกต้องของเกียรติบัตรที่ออกโดยระบบ
+                                    ดูรายละเอียดการออกเกียรติบัตร และตรวจสอบสถานะการใช้งาน
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Create Cert Section - Replace existing -->
-                <div id="create-cert" class="content-section">
+                <!-- Staff Report Issue Section -->
+                <div id="staff-report-issue" class="content-section">
                     <div class="content-header">
-                        <h2><i class="fas fa-plus-circle text-info me-2"></i>ระบบสร้างเกียรติบัตร</h2>
-                        <p class="text-muted">คู่มือการสร้างเกียรติบัตรสำหรับผู้ดูแลระบบ</p>
+                        <h2><i class="fas fa-exclamation-triangle text-danger me-2"></i>ระบบรายงานปัญหา (เจ้าหน้าที่)</h2>
+                        <p class="text-muted">คู่มือการใช้งานระบบรายงานปัญหาสำหรับเจ้าหน้าที่</p>
                     </div>
 
                     <div class="step-container">
-                        <div class="step-item" id="create-cert-step-1">
+                        <div class="step-item" id="staff-report-issue-step-1">
                             <div class="step-number">1</div>
                             <div class="step-content">
-                                <h4>เลือกแบบฟอร์ม</h4>
-                                <div class="step-image">
-                                    <div class="placeholder-image">
-                                        <i class="fas fa-file-alt fa-3x text-muted"></i>
-                                        <p>ภาพหน้าจอเลือกแบบฟอร์ม</p>
-                                    </div>
-                                </div>
-                                <p class="step-description">
-                                    เลือกแบบฟอร์มเกียรติบัตรที่ต้องการใช้ มีแบบฟอร์มหลากหลายรูปแบบให้เลือก
-                                    พร้อมตัวอย่างการแสดงผลก่อนสร้างเกียรติบัตรจริง
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="step-item" id="create-cert-step-2">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h4>กรอกข้อมูล</h4>
-                                <div class="step-image">
-                                    <div class="placeholder-image">
-                                        <i class="fas fa-edit fa-3x text-muted"></i>
-                                        <p>ภาพหน้าจอกรอกข้อมูล</p>
-                                    </div>
-                                </div>
-                                <p class="step-description">
-                                    กรอกข้อมูลที่จำเป็นสำหรับเกียรติบัตร เช่น ชื่อผู้รับ หลักสูตร วันที่ผ่าน
-                                    และข้อมูลผู้ลงนามรับรอง ตรวจสอบความถูกต้องของข้อมูลก่อนดำเนินการ
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="step-item" id="create-cert-step-3">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h4>สร้างเกียรติบัตร</h4>
-                                <div class="step-image">
-                                    <div class="placeholder-image">
-                                        <i class="fas fa-certificate fa-3x text-muted"></i>
-                                        <p>ภาพหน้าจอสร้างเกียรติบัตร</p>
-                                    </div>
-                                </div>
-                                <p class="step-description">
-                                    ตรวจสอบตัวอย่างเกียรติบัตรก่อนสร้างจริง หากถูกต้องแล้วกดสร้างเกียรติบัตร
-                                    ระบบจะสร้างรหัสอ้างอิงและส่งเกียรติบัตรไปยังอีเมลผู้รับ
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Report Issue Section - Replace existing -->
-                <div id="report-issue" class="content-section">
-                    <div class="content-header">
-                        <h2><i class="fas fa-exclamation-triangle text-danger me-2"></i>ระบบแจ้งปัญหา</h2>
-                        <p class="text-muted">คู่มือการแจ้งปัญหาและการจัดการปัญหา</p>
-                    </div>
-
-                    <div class="step-container">
-                        <div class="step-item" id="report-issue-step-1">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h4>แจ้งปัญหา</h4>
+                                <h4>รายงานปัญหา</h4>
                                 <div class="step-image">
                                     <div class="placeholder-image">
                                         <i class="fas fa-bug fa-3x text-muted"></i>
-                                        <p>ภาพหน้าจอแจ้งปัญหา</p>
+                                        <p>ภาพหน้าจอรายงานปัญหา</p>
                                     </div>
                                 </div>
                                 <p class="step-description">
-                                    กรอกรายละเอียดปัญหาที่พบ ระบุประเภทปัญหา แนบไฟล์รูปภาพหรือเอกสารประกอบ
-                                    และระบุระดับความเร่งด่วนของปัญหา
+                                    เจ้าหน้าที่สามารถรายงานปัญหาที่พบในระบบ แจ้งข้อผิดพลาดต่างๆ
+                                    และส่งข้อมูลปัญหาเข้าสู่ระบบ
                                 </p>
                             </div>
                         </div>
 
-                        <div class="step-item" id="report-issue-step-2">
+                        <div class="step-item" id="staff-report-issue-step-2">
                             <div class="step-number">2</div>
                             <div class="step-content">
                                 <h4>ติดตามสถานะ</h4>
                                 <div class="step-image">
                                     <div class="placeholder-image">
-                                        <i class="fas fa-tasks fa-3x text-muted"></i>
+                                        <i class="fas fa-eye fa-3x text-muted"></i>
                                         <p>ภาพหน้าจอติดตามสถานะ</p>
                                     </div>
                                 </div>
                                 <p class="step-description">
-                                    ติดตามสถานะการแก้ไขปัญหาผ่านหมายเลขอ้างอิงที่ได้รับ ดูความคืบหน้าการแก้ไข
-                                    และรับการแจ้งเตือนเมื่อปัญหาได้รับการแก้ไขแล้ว
+                                    ติดตามสถานะการแก้ไขปัญหาที่รายงานไปแล้ว ดูความคืบหน้าในการแก้ไข
+                                    และรับการแจ้งเตือนเมื่อมีการอัปเดต
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin Points Section -->
+                <div id="admin-points" class="content-section">
+                    <div class="content-header">
+                        <h2><i class="fas fa-star text-warning me-2"></i>ระบบสะสมแต้ม (ผู้ดูแลระบบ)</h2>
+                        <p class="text-muted">คู่มือการจัดการระบบสะสมแต้มสำหรับผู้ดูแลระบบ</p>
+                    </div>
+
+                    <div class="step-container">
+                        <div class="step-item" id="admin-points-step-1">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>จัดการระบบสะสมแต้ม</h4>
+                                <div class="step-image">
+                                    <div class="placeholder-image">
+                                        <i class="fas fa-users-cog fa-3x text-muted"></i>
+                                        <p>ภาพหน้าจอจัดการระบบสะสมแต้ม</p>
+                                    </div>
+                                </div>
+                                <p class="step-description">
+                                    ผู้ดูแลระบบสามารถจัดการระบบสะสมแต้มทั้งหมด ตั้งค่าการทำงานของระบบ
+                                    จัดการบัญชีผู้ใช้ และควบคุมการเข้าถึงระบบ
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="step-item" id="admin-points-step-2">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>ตั้งค่าระบบแต้ม</h4>
+                                <div class="step-image">
+                                    <div class="placeholder-image">
+                                        <i class="fas fa-cogs fa-3x text-muted"></i>
+                                        <p>ภาพหน้าจอตั้งค่าระบบแต้ม</p>
+                                    </div>
+                                </div>
+                                <p class="step-description">
+                                    ตั้งค่าการทำงานของระบบแต้มสะสม กำหนดเงื่อนไขการให้แต้ม
+                                    และปรับแต่งกฎการใช้งานแต้มสะสม
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="step-item" id="admin-points-step-3">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>รายงานสถิติแต้ม</h4>
+                                <div class="step-image">
+                                    <div class="placeholder-image">
+                                        <i class="fas fa-chart-bar fa-3x text-muted"></i>
+                                        <p>ภาพหน้าจอรายงานสถิติแต้ม</p>
+                                    </div>
+                                </div>
+                                <p class="step-description">
+                                    ดูรายงานสถิติการใช้งานระบบแต้มสะสม วิเคราะห์ข้อมูลการสะสมแต้ม
+                                    และสร้างรายงานสำหรับผู้บริหาร
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="step-item" id="admin-points-step-4">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>จัดการผู้ใช้งาน</h4>
+                                <div class="step-image">
+                                    <div class="placeholder-image">
+                                        <i class="fas fa-user-edit fa-3x text-muted"></i>
+                                        <p>ภาพหน้าจอจัดการผู้ใช้งาน</p>
+                                    </div>
+                                </div>
+                                <p class="step-description">
+                                    จัดการบัญชีผู้ใช้งานในระบบ เพิ่มผู้ใช้ใหม่ แก้ไขข้อมูล
+                                    และจัดการสิทธิ์การเข้าถึง
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin Booking Section -->
+                <div id="admin-booking" class="content-section">
+                    <div class="content-header">
+                        <h2><i class="fas fa-calendar-alt text-primary me-2"></i>ระบบจองรอบฐานกิจกรรม (ผู้ดูแลระบบ)</h2>
+                        <p class="text-muted">คู่มือการจัดการระบบจองรอบฐานกิจกรรมสำหรับผู้ดูแลระบบ</p>
+                    </div>
+
+                    <div class="step-container">
+                        <div class="step-item" id="admin-booking-step-1">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>จัดการรอบฐานกิจกรรม</h4>
+                                <div class="step-image">
+                                    <div class="placeholder-image">
+                                        <i class="fas fa-calendar-plus fa-3x text-muted"></i>
+                                        <p>ภาพหน้าจอจัดการรอบฐานกิจกรรม</p>
+                                    </div>
+                                </div>
+                                <p class="step-description">
+                                    ผู้ดูแลระบบสามารถจัดการรอบฐานกิจกรรมทั้งหมด สร้างกิจกรรมใหม่
+                                    แก้ไขข้อมูล และจัดการตารางกิจกรรม
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="step-item" id="admin-booking-step-2">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>ตั้งค่าระบบจอง</h4>
+                                <div class="step-image">
+                                    <div class="placeholder-image">
+                                        <i class="fas fa-sliders-h fa-3x text-muted"></i>
+                                        <p>ภาพหน้าจอตั้งค่าระบบจอง</p>
+                                    </div>
+                                </div>
+                                <p class="step-description">
+                                    ตั้งค่าระบบการจอง กำหนดเงื่อนไขการจอง เวลาเปิด-ปิดการจอง
+                                    และข้อกำหนดต่างๆ
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="step-item" id="admin-booking-step-3">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>รายงานสถิติการจอง</h4>
+                                <div class="step-image">
+                                    <div class="placeholder-image">
+                                        <i class="fas fa-chart-line fa-3x text-muted"></i>
+                                        <p>ภาพหน้าจอรายงานสถิติการจอง</p>
+                                    </div>
+                                </div>
+                                <p class="step-description">
+                                    ดูรายงานสถิติการจองต่างๆ วิเคราะห์ข้อมูลการใช้งาน
+                                    และสร้างรายงานประจำงวด
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="step-item" id="admin-booking-step-4">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>จัดการสิทธิ์การจอง</h4>
+                                <div class="step-image">
+                                    <div class="placeholder-image">
+                                        <i class="fas fa-user-lock fa-3x text-muted"></i>
+                                        <p>ภาพหน้าจอจัดการสิทธิ์การจอง</p>
+                                    </div>
+                                </div>
+                                <p class="step-description">
+                                    จัดการสิทธิ์การจองของผู้ใช้แต่ละคน กำหนดข้อจำกัดการจอง
+                                    และจัดการกลุ่มผู้ใช้
                                 </p>
                             </div>
                         </div>
@@ -592,11 +834,76 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Navigation functionality
+        // Enhanced navigation functionality with fade highlight
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.sub-nav-link');
+            const sectionTitles = document.querySelectorAll('.nav-section-title');
             const contentSections = document.querySelectorAll('.content-section');
             const stepLinks = document.querySelectorAll('.step-link');
+            let currentActiveStep = null;
+            
+            // Create loading overlay
+            const loadingOverlay = document.createElement('div');
+            loadingOverlay.className = 'loading-overlay';
+            loadingOverlay.innerHTML = '<div class="loading-spinner"></div>';
+            document.body.appendChild(loadingOverlay);
+            
+            // Section title navigation functionality
+            sectionTitles.forEach(title => {
+                title.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Get the target section ID
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        // Close all other sections first
+                        sectionTitles.forEach(t => {
+                            if (t !== this) {
+                                const otherTargetId = t.getAttribute('href').substring(1);
+                                const otherSection = document.getElementById(otherTargetId);
+                                if (otherSection) {
+                                    otherSection.classList.remove('show');
+                                }
+                            }
+                        });
+                        
+                        // Toggle the clicked section
+                        const isCurrentlyOpen = targetSection.classList.contains('show');
+                        
+                        if (isCurrentlyOpen) {
+                            // If currently open, close it
+                            targetSection.classList.remove('show');
+                        } else {
+                            // If not open, open it
+                            targetSection.classList.add('show');
+                        }
+                        
+                        // Close all sub-nav-links when section changes
+                        navLinks.forEach(l => {
+                            l.classList.remove('active');
+                            const collapseId = l.getAttribute('href').substring(1);
+                            const collapseElement = document.getElementById(collapseId);
+                            if (collapseElement) {
+                                collapseElement.classList.remove('show');
+                            }
+                        });
+                        
+                        // Hide all content sections
+                        contentSections.forEach(section => {
+                            section.classList.remove('active');
+                        });
+                        
+                        // Update submenu arrows
+                        updateSubmenuArrows();
+                        
+                        // Clear any existing highlights
+                        clearHighlights();
+                    }
+                });
+            });
             
             // Main navigation functionality
             navLinks.forEach(link => {
@@ -604,27 +911,71 @@
                     e.preventDefault();
                     e.stopPropagation();
                     
-                    // Remove active class from all links
-                    navLinks.forEach(l => l.classList.remove('active'));
+                    // Show loading
+                    showLoading();
                     
-                    // Add active class to clicked link
-                    this.classList.add('active');
-                    
-                    // Hide all content sections
-                    contentSections.forEach(section => {
-                        section.classList.remove('active');
-                    });
-                    
-                    // Show selected content section
-                    const sectionId = this.getAttribute('data-section');
-                    document.getElementById(sectionId).classList.add('active');
-                    
-                    // Update submenu arrow rotation
-                    updateSubmenuArrows();
+                    setTimeout(() => {
+                        // Close all other sub-nav-links first
+                        navLinks.forEach(l => {
+                            if (l !== this) {
+                                l.classList.remove('active');
+                                // Close the corresponding collapse
+                                const collapseId = l.getAttribute('href').substring(1);
+                                const collapseElement = document.getElementById(collapseId);
+                                if (collapseElement) {
+                                    collapseElement.classList.remove('show');
+                                }
+                            }
+                        });
+                        
+                        // Toggle the clicked link
+                        const isCurrentlyActive = this.classList.contains('active');
+                        
+                        if (isCurrentlyActive) {
+                            // If currently active, close it
+                            this.classList.remove('active');
+                            const collapseId = this.getAttribute('href').substring(1);
+                            const collapseElement = document.getElementById(collapseId);
+                            if (collapseElement) {
+                                collapseElement.classList.remove('show');
+                            }
+                        } else {
+                            // If not active, open it
+                            this.classList.add('active');
+                            const collapseId = this.getAttribute('href').substring(1);
+                            const collapseElement = document.getElementById(collapseId);
+                            if (collapseElement) {
+                                collapseElement.classList.add('show');
+                            }
+                        }
+                        
+                        // Hide all content sections
+                        contentSections.forEach(section => {
+                            section.classList.remove('active');
+                        });
+                        
+                        // Show selected content section only if link is now active
+                        if (!isCurrentlyActive) {
+                            const sectionId = this.getAttribute('data-section');
+                            const targetSection = document.getElementById(sectionId);
+                            if (targetSection) {
+                                targetSection.classList.add('active');
+                            }
+                        }
+                        
+                        // Update submenu arrows
+                        updateSubmenuArrows();
+                        
+                        // Hide loading
+                        hideLoading();
+                        
+                        // Clear any existing highlights
+                        clearHighlights();
+                    }, 300);
                 });
             });
             
-            // Step navigation functionality
+            // Enhanced step navigation functionality
             stepLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -633,6 +984,12 @@
                     const targetElement = document.getElementById(targetId);
                     
                     if (targetElement) {
+                        // Remove active class from all step links
+                        stepLinks.forEach(l => l.classList.remove('active'));
+                        
+                        // Add active class to clicked step link
+                        this.classList.add('active');
+                        
                         // First, ensure the parent section is visible
                         const parentSection = targetElement.closest('.content-section');
                         if (parentSection) {
@@ -644,13 +1001,29 @@
                             // Show parent section
                             parentSection.classList.add('active');
                             
-                            // Update main navigation
-                            navLinks.forEach(l => l.classList.remove('active'));
+                            // Update main navigation - close all first, then open the relevant one
+                            navLinks.forEach(l => {
+                                l.classList.remove('active');
+                                const collapseId = l.getAttribute('href').substring(1);
+                                const collapseElement = document.getElementById(collapseId);
+                                if (collapseElement) {
+                                    collapseElement.classList.remove('show');
+                                }
+                            });
+                            
                             const mainNavLink = document.querySelector(`[data-section="${parentSection.id}"]`);
                             if (mainNavLink) {
                                 mainNavLink.classList.add('active');
+                                const collapseId = mainNavLink.getAttribute('href').substring(1);
+                                const collapseElement = document.getElementById(collapseId);
+                                if (collapseElement) {
+                                    collapseElement.classList.add('show');
+                                }
                             }
                         }
+                        
+                        // Clear previous highlights
+                        clearHighlights();
                         
                         // Scroll to target element with smooth scrolling
                         setTimeout(() => {
@@ -658,51 +1031,310 @@
                                 behavior: 'smooth',
                                 block: 'start'
                             });
+                            
+                            // Add enhanced highlight effect after scrolling
+                            setTimeout(() => {
+                                addHighlightEffect(targetElement);
+                            }, 500);
                         }, 100);
-                        
-                        // Add highlight effect
-                        targetElement.classList.add('highlight');
-                        setTimeout(() => {
-                            targetElement.classList.remove('highlight');
-                        }, 2000);
                     }
                 });
+            });
+            
+            // Function to add enhanced highlight effect
+            function addHighlightEffect(element) {
+                // Clear any existing highlights
+                clearHighlights();
+                
+                // Add highlight class
+                element.classList.add('highlight');
+                currentActiveStep = element;
+                
+                // Remove highlight after animation completes
+                setTimeout(() => {
+                    if (element.classList.contains('highlight')) {
+                        element.classList.remove('highlight');
+                    }
+                }, 3000);
+            }
+            
+            // Function to clear all highlights
+            function clearHighlights() {
+                const highlightedElements = document.querySelectorAll('.step-item.highlight');
+                highlightedElements.forEach(el => {
+                    el.classList.remove('highlight');
+                });
+                currentActiveStep = null;
+            }
+            
+            // Function to show loading
+            function showLoading() {
+                loadingOverlay.classList.add('show');
+            }
+            
+            // Function to hide loading
+            function hideLoading() {
+                loadingOverlay.classList.remove('show');
+            }
+            
+            // Function to update submenu arrows
+            function updateSubmenuArrows() {
+                const submenuArrows = document.querySelectorAll('.submenu-arrow');
+                submenuArrows.forEach(arrow => {
+                    const parent = arrow.closest('.sub-nav-link');
+                    if (parent && parent.classList.contains('active')) {
+                        arrow.style.transform = 'rotate(180deg)';
+                    } else {
+                        arrow.style.transform = 'rotate(0deg)';
+                    }
+                });
+            }
+            
+            // Initialize submenu arrows
+            updateSubmenuArrows();
+            
+            // Add keyboard navigation support
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    clearHighlights();
+                }
+            });
+            
+            // Add intersection observer for auto-highlighting visible steps
+            const observerOptions = {
+                threshold: 0.7,
+                rootMargin: '-50px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const stepId = entry.target.id;
+                        const correspondingLink = document.querySelector(`[data-target="${stepId}"]`);
+                        if (correspondingLink && !entry.target.classList.contains('highlight')) {
+                            // Update active step link
+                            stepLinks.forEach(l => l.classList.remove('active'));
+                            correspondingLink.classList.add('active');
+                        }
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all step items
+            const stepItems = document.querySelectorAll('.step-item');
+            stepItems.forEach(item => {
+                observer.observe(item);
             });
         });
     </script>
     
     <style>
-        /* Additional styles for step navigation */
-        .nav-sub-steps {
-            padding-left: 1rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .step-link {
-            font-size: 0.85rem;
-            color: #6c757d;
-            padding: 0.25rem 0.5rem;
-            border-radius: 0.25rem;
-            transition: all 0.3s ease;
-        }
-        
-        .step-link:hover {
-            background-color: #f8f9fa;
-            color: #495057;
-            text-decoration: none;
+        /* Enhanced fade highlight animation */
+        .step-item {
+            scroll-margin-top: 2rem;
+            transition: all 0.5s ease;
+            position: relative;
         }
         
         .step-item.highlight {
-            background-color: #fff3cd;
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 50%, #fff3cd 100%);
             border: 2px solid #ffc107;
-            border-radius: 0.5rem;
-            padding: 1rem;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
             margin: 0.5rem 0;
+            box-shadow: 0 8px 25px rgba(255, 193, 7, 0.3);
+            transform: translateY(-5px);
+            animation: highlightFade 3s ease-in-out forwards;
+        }
+        
+        @keyframes highlightFade {
+            0% {
+                background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 50%, #fff3cd 100%);
+                border-color: #ffc107;
+                box-shadow: 0 8px 25px rgba(255, 193, 7, 0.3);
+                transform: translateY(-5px) scale(1.02);
+            }
+            50% {
+                background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 50%, #fff8e1 100%);
+                border-color: #ffb300;
+                box-shadow: 0 12px 35px rgba(255, 193, 7, 0.4);
+                transform: translateY(-8px) scale(1.03);
+            }
+            100% {
+                background: transparent;
+                border-color: transparent;
+                box-shadow: none;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        /* Pulse effect for step number during highlight */
+        .step-item.highlight .step-number {
+            animation: pulseNumber 2s ease-in-out;
+        }
+        
+        @keyframes pulseNumber {
+            0%, 100% {
+                transform: scale(1);
+                background-color: #007bff;
+            }
+            25% {
+                transform: scale(1.1);
+                background-color: #ffc107;
+            }
+            50% {
+                transform: scale(1.2);
+                background-color: #28a745;
+            }
+            75% {
+                transform: scale(1.1);
+                background-color: #dc3545;
+            }
+        }
+        
+        /* Enhanced step navigation styles */
+        .nav-sub-steps {
+            padding-left: 1rem;
+            padding-right: 1rem; /* Added padding to prevent touching right edge */
+            margin-bottom: 0.5rem;
+        }
+
+        .step-link {
+            font-size: 0.85rem;
+            color: #6c757d;
+            padding: 0.4rem 0.8rem;
+            margin-right: 0.5rem; /* Added margin to pull away from right edge */
+            border-radius: 0.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            display: block;
+            overflow: hidden;
+        }
+        
+        .step-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .step-link:hover {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            color: #1976d2;
+            text-decoration: none;
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);
+        }
+        
+        .step-link:hover::before {
+            left: 100%;
+        }
+        
+        /* Active step link styling */
+        .step-link.active {
+            background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4);
+        }
+        
+        /* Smooth scrolling enhancement */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Content section transition */
+        .content-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+        
+        .content-section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Step content fade-in effect */
+        .step-content {
             transition: all 0.3s ease;
         }
         
-        .step-item {
-            scroll-margin-top: 2rem;
+        .step-item.highlight .step-content {
+            animation: contentGlow 2s ease-in-out;
+        }
+        
+        @keyframes contentGlow {
+            0% {
+                filter: brightness(1);
+            }
+            50% {
+                filter: brightness(1.1) contrast(1.1);
+            }
+            100% {
+                filter: brightness(1);
+            }
+        }
+        
+        /* Image highlight effect */
+        .step-item.highlight .step-image img,
+        .step-item.highlight .placeholder-image {
+            animation: imageHighlight 2s ease-in-out;
+        }
+        
+        @keyframes imageHighlight {
+            0% {
+                filter: brightness(1) saturate(1);
+                transform: scale(1);
+            }
+            50% {
+                filter: brightness(1.1) saturate(1.2);
+                transform: scale(1.02);
+            }
+            100% {
+                filter: brightness(1) saturate(1);
+                transform: scale(1);
+            }
+        }
+        
+        /* Loading spinner for smooth transitions */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .loading-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #007bff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </body>
